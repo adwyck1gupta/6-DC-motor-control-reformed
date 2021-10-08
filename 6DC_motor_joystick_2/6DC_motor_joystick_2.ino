@@ -1,3 +1,4 @@
+# include <string.h>
 #define SPEED1 13        //Defining the Enable pins 
 #define SPEED2 12
 #define SPEED3 11
@@ -28,7 +29,7 @@ int jx1=0;     // AXIS of Joystick
 int jx2=0;
 int jy1=0;
 int jy2=0;
-char x;
+String x;
 
 
 void setup() {
@@ -67,7 +68,7 @@ void loop() {
   
 
 if (Serial.available()>0){
- x=Serial.read();
+ x=Serial.readString();
 }
   if(x=='1'){
 
